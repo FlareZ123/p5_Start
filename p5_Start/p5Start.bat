@@ -1,6 +1,6 @@
 @echo off
 
-SET templatePath=%~f0
+SET templatePath=%~f0\fresh_project_template
 
 IF /I "%1"=="" (
    ECHO Fail! -  Project name no set...
