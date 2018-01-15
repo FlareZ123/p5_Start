@@ -1,6 +1,6 @@
 @echo off
 
-SET templatePath=%~f0\fresh_project_template
+SET templatePath=%~f0\.\fresh_project_template
 
 IF /I "%1"=="" (
    ECHO Fail! -  Project name no set...
@@ -11,7 +11,7 @@ IF /I "%1"=="" (
         ECHO Creating base project...
 	mkdir %cd%\.\%1
 	cd %cd%\.\%1
-	xcopy %cd%\.\%templatePath% %cd%\.\%1 /E
+	xcopy %templatePath% %cd%\.\%1 /E
 	cd ..\
 	Echo Done!
     )
